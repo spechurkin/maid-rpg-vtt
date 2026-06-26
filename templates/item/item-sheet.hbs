@@ -1,0 +1,59 @@
+<form class="{{cssClass}} maid-item-sheet" autocomplete="off">
+    <header class="maid-sheet-header item-sheet-header">
+        <div class="bordered-panel item-image-panel">
+            <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        </div>
+        <div class="bordered-panel maid-sheet-title item-title-panel">
+            <h2>{{localize (lookup config.itemTypes item.type)}}</h2>
+            <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'Name'}}"/></h1>
+        </div>
+    </header>
+
+    {{#if (eq item.type "uniform")}}
+        <section class="bordered-panel item-card uniform-fields">
+            <div class="grid two-col">
+                <label class="underlined-field">{{localize "MAID_RPG.Item.Cost"}}
+                    <input type="text" name="system.cost" value="{{system.cost}}"/>
+                </label>
+                <label class="underlined-field">{{localize "MAID_RPG.Item.Requirements"}}
+                    <input type="text" name="system.requirements" value="{{system.requirements}}"/>
+                </label>
+            </div>
+            <div class="stacked-field item-rich-field item-block">
+                <div class="note-heading-strip">
+                    <h3>{{localize "MAID_RPG.Item.Restrictions"}}</h3>
+                </div>
+                {{editor enrichedRestrictions target="system.restrictions" button=true owner=owner editable=editable
+                         engine="prosemirror"}}
+            </div>
+            <div class="stacked-field item-rich-field item-block">
+                <div class="note-heading-strip">
+                    <h3>{{localize "MAID_RPG.Item.Benefits"}}</h3>
+                </div>
+                {{editor enrichedBenefits target="system.benefits" button=true owner=owner editable=editable
+                         engine="prosemirror"}}
+            </div>
+            <div class="stacked-field item-rich-field item-block">
+                <div class="note-heading-strip">
+                    <h3>{{localize "MAID_RPG.Item.Notes"}}</h3>
+                </div>
+                {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable
+                         engine="prosemirror"}}
+            </div>
+        </section>
+    {{else}}
+        <section class="bordered-panel item-card common-item-fields">
+            <label class="underlined-field item-type-label">{{localize "MAID_RPG.Item.CustomType"}}
+                <input type="text" name="system.itemType" value="{{system.itemType}}"
+                       placeholder="{{localize 'MAID_RPG.Item.CustomTypePlaceholder'}}"/>
+            </label>
+            <div class="stacked-field item-rich-field item-description-field item-block">
+                <div class="note-heading-strip">
+                    <h3>{{localize "MAID_RPG.Item.Description"}}</h3>
+                </div>
+                {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable
+                         engine="prosemirror"}}
+            </div>
+        </section>
+    {{/if}}
+</form>

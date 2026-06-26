@@ -1,0 +1,224 @@
+<form class="{{cssClass}} maid-character-sheet" autocomplete="off">
+    {{#if (eq actor.type "master")}}
+        <header class="maid-sheet-header">
+            <section class="maid-sheet-title">
+                <h1>MAID RPG</h1>
+                <h2>{{localize "MAID_RPG.Master.CharacterSheet"}}</h2>
+                <div class="maid-role-radios">
+                    <label><input type="radio" disabled/> {{localize "MAID_RPG.Actor.Maid"}}</label>
+                    <label><input type="radio" disabled/> {{localize "MAID_RPG.Actor.Butler"}}</label>
+                    <label><input type="radio" checked disabled/> {{localize "MAID_RPG.Actor.Master"}}</label>
+                </div>
+            </section>
+
+            <section class="identity-panel bordered-panel">
+                <div class="grid two-col compact-grid">
+                    <label class="underlined-label">{{localize "Name"}}
+                        <input name="name" type="text" value="{{actor.name}}"/>
+                    </label>
+                    <label class="underlined-label">{{localize "MAID_RPG.Sheet.Age"}}
+                        <input name="system.age" type="number" value="{{system.age}}"/>
+                    </label>
+                </div>
+                <div class="grid three-col compact-grid">
+                    <label class="underlined-label">{{localize "MAID_RPG.Master.FaveMaidType"}}
+                        <select name="system.faveMaidType">
+                            {{selectOptions config.maidTypes selected=system.faveMaidType localize=true blank=""}}
+                        </select>
+                    </label>
+                    <label class="underlined-label">{{localize "MAID_RPG.Maid.Color.Eyes"}}
+                        <input name="system.colors.eyes" type="text" value="{{system.colors.eyes}}"/>
+                    </label>
+                    <label class="underlined-label">{{localize "MAID_RPG.Maid.Color.Hair"}}
+                        <input name="system.colors.hair" type="text" value="{{system.colors.hair}}"/>
+                    </label>
+                </div>
+            </section>
+
+            <section class="maid-types-panel bordered-panel">
+                <label class="underlined-label">{{localize "MAID_RPG.Master.Type"}}
+                    <select name="system.masterType">
+                        {{selectOptions config.masterTypes selected=system.masterType localize=true blank=""}}
+                    </select>
+                </label>
+            </section>
+        </header>
+
+        <nav class="sheet-tabs tabs maid-sheet-tabs" data-group="primary">
+            <a class="item" data-tab="main">{{localize "MAID_RPG.Tab.Main"}}</a>
+            <a class="item" data-tab="bio">{{localize "MAID_RPG.Tab.Bio"}}</a>
+        </nav>
+
+        <section class="sheet-body">
+            <section class="tab" data-group="primary" data-tab="main">
+                <main class="maid-sheet-grid">
+            <aside class="attributes-panel bordered-panel">
+                <div class="note-heading-strip">
+                    <h3>{{localize "MAID_RPG.Sheet.Attributes"}}</h3>
+                </div>
+                <div class="attribute-grid">
+                    {{#each system.attributes as |value key|}}
+                        <div class="attribute-card">
+                            <button class="attribute-roll" type="button" data-roll-attribute="{{key}}">{{localize
+                                    (lookup ../config.attributes key)}}</button>
+                            <output class="attribute-total">{{lookup ../system.attributeTotals key}}</output>
+                            <div class="attribute-inputs">
+                                <label><input type="number" name="system.attributes.{{key}}"
+                                              value="{{value}}" min="0"/><span>{{localize "MAID_RPG.Sheet.Base"}}</span></label>
+                                <label><input type="number" name="system.attributeMods.{{key}}"
+                                              value="{{lookup ../system.attributeMods key}}"/><span>{{localize
+                                        "MAID_RPG.Sheet.Mod"}}</span></label>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+                <div class="note-heading-strip">
+                    <h3>{{localize "MAID_RPG.Sheet.QuickRolls"}}</h3>
+                </div>
+                <div class="quick-rolls grid two-col">
+                    <button type="button" data-roll-formula="1d6">D6</button>
+                    <button type="button" data-roll-formula="2d6">2D6</button>
+                    <button type="button" data-roll-formula="1d6 * 10 + 1d6">D66</button>
+                    <button type="button" data-roll-formula="1d6 * 100 + 1d6 * 10 + 1d6">D666</button>
+                </div>
+            </aside>
+
+            <section class="maid-main-panel">
+                <div class="grid three-col feature-row">
+                    <section class="feature-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Master.PowerSource.Label"}} 1</h3>
+                        </div>
+                        <select name="system.powerSources.0">{{selectOptions config.masterPowerSources
+                                                                             selected=(lookup system.powerSources 0)
+                                                                             localize=true blank=""}}</select>
+                        <textarea name="system.powerSourceDescriptions.0" placeholder="{{localize
+                                'MAID_RPG.Master.PowerSource.DescriptionPlaceholder'}}">{{lookup
+                                system.powerSourceDescriptions 0}}</textarea>
+                    </section>
+                    <section class="feature-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Master.PowerSource.Label"}} 2</h3>
+                        </div>
+                        <select name="system.powerSources.1">{{selectOptions config.masterPowerSources
+                                                                             selected=(lookup system.powerSources 1)
+                                                                             localize=true blank=""}}</select>
+                        <textarea name="system.powerSourceDescriptions.1" placeholder="{{localize
+                                'MAID_RPG.Master.PowerSource.DescriptionPlaceholder'}}">{{lookup
+                                system.powerSourceDescriptions 1}}</textarea>
+                    </section>
+                    <section class="feature-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Maid.StressExplosion.Label"}}</h3>
+                        </div>
+                        <select name="system.stressExplosion">{{selectOptions config.stressExplosions
+                                                                              selected=system.stressExplosion
+                                                                              localize=true blank=""}}</select>
+                        <textarea name="system.stressExplosionDescription" placeholder="{{localize
+                                'MAID_RPG.Maid.StressExplosion.DescriptionPlaceholder'}}">{{system.stressExplosionDescription}}</textarea>
+                    </section>
+                </div>
+
+                <section class="qualities-panel">
+                    <div class="note-heading-strip">
+                        <h3>{{localize "MAID_RPG.Master.SpecialQuality.Plural"}}</h3>
+                    </div>
+                    <div class="grid three-col feature-row">
+                        {{#each system.specialQualities as |quality index|}}
+                            <section class="feature-box">
+                                <select name="system.specialQualities.{{index}}">{{selectOptions
+                                        ../config.masterSpecialQualities
+                                        selected=quality
+                                        localize=true blank=""}}</select>
+                                <textarea name="system.specialQualityDescriptions.{{index}}" placeholder="{{localize
+                                        'MAID_RPG.Master.SpecialQuality.DescriptionPlaceholder'}}">{{lookup
+                                        ../system.specialQualityDescriptions index}}</textarea>
+                            </section>
+                        {{/each}}
+                    </div>
+                </section>
+            </section>
+                </main>
+
+                <section class="maid-notes-grid">
+                    <section class="note-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Stress"}}</h3>
+                        </div>
+                        <textarea name="system.stressNotes" placeholder="{{localize
+                                'MAID_RPG.Sheet.StressPlaceholder'}}">{{system.stressNotes}}</textarea>
+                    </section>
+                    <section class="note-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Sheet.Trauma"}}</h3>
+                        </div>
+                        <textarea name="system.trauma"
+                                  placeholder="{{localize 'MAID_RPG.Sheet.Trauma'}}">{{system.trauma}}</textarea>
+                    </section>
+                    <section class="note-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Sheet.Seduction"}}</h3>
+                        </div>
+                        <textarea name="system.seduction" placeholder="{{localize
+                                'MAID_RPG.Sheet.SeductionPlaceholder'}}">{{system.seduction}}</textarea>
+                    </section>
+                </section>
+            </section>
+
+            <section class="tab" data-group="primary" data-tab="bio">
+                <section class="maid-bio-grid">
+                    <section class="maid-portrait-panel note-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Sheet.Portrait"}}</h3>
+                        </div>
+                        <img class="maid-profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+                    </section>
+                    <section class="maid-backstory-panel note-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Sheet.Backstory"}}</h3>
+                        </div>
+                        <textarea name="system.description" placeholder="{{localize 'MAID_RPG.Sheet.BackstoryPlaceholder'}}">{{system.description}}</textarea>
+                    </section>
+                </section>
+
+                <section class="maid-notes-grid">
+                    <section class="note-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Notes"}}</h3>
+                        </div>
+                        <textarea name="system.notes"
+                                  placeholder="{{localize
+                                          'MAID_RPG.Sheet.NotesPlaceholder'}}">{{system.notes}}</textarea>
+                    </section>
+                    <section class="note-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Master.Mansion"}}</h3>
+                        </div>
+                        <textarea name="system.mansion" placeholder="{{localize
+                                'MAID_RPG.Master.MansionPlaceholder'}}">{{system.mansion}}</textarea>
+                    </section>
+                    <section class="note-box">
+                        <div class="note-heading-strip">
+                            <h3>{{localize "MAID_RPG.Master.EncounterTable"}}</h3>
+                        </div>
+                        <textarea name="system.encounterTable" placeholder="{{localize
+                                'MAID_RPG.Master.EncounterTablePlaceholder'}}">{{system.encounterTable}}</textarea>
+                    </section>
+                </section>
+            </section>
+        </section>
+    {{else}}
+        <header class="sheet-header">
+            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+            <div class="header-fields">
+                <h1><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'Name'}}"/></h1>
+                <div class="resources grid two-col">
+                    <label>{{localize "MAID_RPG.Resolve"}} <input type="number" name="system.resolve.value"
+                                                                  value="{{system.resolve.value}}"/></label>
+                    <label>{{localize "MAID_RPG.Stress"}} <input type="number" name="system.stress.value"
+                                                                 value="{{system.stress.value}}"/></label>
+                </div>
+            </div>
+        </header>
+    {{/if}}
+</form>

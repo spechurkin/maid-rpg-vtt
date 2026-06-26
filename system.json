@@ -1,0 +1,65 @@
+{
+  "id": "maid-rpg-vtt",
+  "title": "Maid RPG Test System",
+  "description": "A compact Foundry VTT V13/V14 test system inspired by modern community system structure.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351"
+  },
+  "authors": [
+    {
+      "name": "HoloLight17"
+    },
+    {
+      "name": "OpenAI Codex"
+    }
+  ],
+  "esmodules": [
+    "module/maid-rpg.mjs"
+  ],
+  "styles": [
+    "styles/maid-rpg.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "ru",
+      "name": "Русский",
+      "path": "lang/ru.json"
+    }
+  ],
+  "packs": [
+    {
+      "label": "The Great List of Items",
+      "type": "Item",
+      "name": "items-list",
+      "path": "./packs/items-list.db",
+      "system": "maid-rpg-vtt",
+      "banner": "systems/maid-rpg-vtt/images/compendium-banner.png"
+    },
+    {
+      "label": "Costumes",
+      "type": "Item",
+      "name": "costumes",
+      "path": "./packs/costumes.db",
+      "system": "maid-rpg-vtt",
+      "banner": "systems/maid-rpg-vtt/images/compendium-banner.png"
+    },
+    {
+      "label": "Roll Tables",
+      "type": "RollTable",
+      "name": "roll-tables",
+      "path": "./packs/roll-tables.db",
+      "system": "maid-rpg-vtt",
+      "banner": "systems/maid-rpg-vtt/images/compendium-banner.png"
+    }
+  ],
+  "url": "https://github.com/spechurkin/maid-rpg-vtt",
+  "manifest": "https://github.com/spechurkin/maid-rpg-vtt/releases/latest/download/system.json",
+  "download": "https://github.com/spechurkin/maid-rpg-vtt/releases/latest/download/maid-rpg-vtt.zip"
+}

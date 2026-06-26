@@ -1,0 +1,206 @@
+{
+  "Actor": {
+    "types": [
+      "maid",
+      "butler",
+      "master",
+      "npc"
+    ],
+    "htmlFields": [
+      "description",
+      "notes"
+    ],
+    "templates": {
+      "base": {
+        "description": "",
+        "notes": "",
+        "attributes": {
+          "athletics": 1,
+          "affection": 1,
+          "skill": 1,
+          "cunning": 1,
+          "luck": 1,
+          "will": 1
+        },
+        "resolve": {
+          "value": 10,
+          "max": 10
+        },
+        "stress": {
+          "value": 0,
+          "max": 20
+        },
+        "attributeMods": {
+          "athletics": 0,
+          "affection": 0,
+          "skill": 0,
+          "cunning": 0,
+          "luck": 0,
+          "will": 0
+        }
+      }
+    },
+    "maid": {
+      "templates": [
+        "base"
+      ],
+      "feature": "pure",
+      "maidTypes": [
+        "",
+        ""
+      ],
+      "specialQualities": [
+        "",
+        "",
+        ""
+      ],
+      "root": "",
+      "stressExplosion": "",
+      "maidPower": "",
+      "colors": {
+        "clothes": "",
+        "eyes": "",
+        "hair": ""
+      },
+      "age": "",
+      "startingFavor": 0,
+      "rootDescription": "",
+      "stressExplosionDescription": "",
+      "maidPowerDescription": "",
+      "specialQualityDescriptions": [
+        "",
+        "",
+        ""
+      ],
+      "stressNotes": "",
+      "favorNotes": "",
+      "maidWeapons": "",
+      "trauma": "",
+      "seduction": ""
+    },
+    "butler": {
+      "templates": [
+        "base"
+      ],
+      "favor": 0,
+      "authority": 1,
+      "butlerTypes": [
+        "",
+        ""
+      ],
+      "specialQualities": [
+        "",
+        "",
+        ""
+      ],
+      "root": "",
+      "butlerPowers": [
+        "",
+        ""
+      ],
+      "colors": {
+        "clothes": "",
+        "eyes": "",
+        "hair": ""
+      },
+      "age": "",
+      "rootDescription": "",
+      "butlerPowerDescriptions": [
+        "",
+        ""
+      ],
+      "specialQualityDescriptions": [
+        "",
+        "",
+        ""
+      ],
+      "stressNotes": "",
+      "favorNotes": "",
+      "maidWeapons": "",
+      "trauma": "",
+      "seduction": "",
+      "veteranBonusAttribute": ""
+    },
+    "npc": {
+      "templates": [
+        "base"
+      ],
+      "threat": 1,
+      "spirit": 0,
+      "kind": "",
+      "abilities": "",
+      "age": ""
+    },
+    "master": {
+      "templates": [
+        "base"
+      ],
+      "favor": 10,
+      "authority": 2,
+      "mood": "neutral",
+      "masterType": "",
+      "faveMaidType": "",
+      "colors": {
+        "eyes": "",
+        "hair": ""
+      },
+      "age": "",
+      "powerSources": [
+        "",
+        ""
+      ],
+      "powerSourceDescriptions": [
+        "",
+        ""
+      ],
+      "stressExplosion": "",
+      "stressExplosionDescription": "",
+      "specialQualities": [
+        "",
+        "",
+        ""
+      ],
+      "specialQualityDescriptions": [
+        "",
+        "",
+        ""
+      ],
+      "stressNotes": "",
+      "trauma": "",
+      "seduction": "",
+      "mansion": "",
+      "encounterTable": ""
+    }
+  },
+  "Item": {
+    "types": [
+      "uniform",
+      "item"
+    ],
+    "htmlFields": [
+      "description",
+      "restrictions",
+      "benefits",
+      "notes"
+    ],
+    "templates": {
+      "base": {
+        "description": "",
+        "tags": ""
+      }
+    },
+    "uniform": {
+      "cost": 0,
+      "requirements": "",
+      "restrictions": "",
+      "benefits": "",
+      "notes": ""
+    },
+    "item": {
+      "templates": [
+        "base"
+      ],
+      "itemType": ""
+    }
+  }
+}

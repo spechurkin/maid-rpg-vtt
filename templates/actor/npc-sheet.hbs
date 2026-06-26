@@ -1,0 +1,56 @@
+<form class="{{cssClass}} maid-character-sheet npc-character-sheet" autocomplete="off">
+    <header class="npc-sheet-header bordered-panel">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        <section class="npc-title-panel">
+            <h1>{{localize "MAID_RPG.Npc.CharacterSheet"}}</h1>
+            <div class="npc-identity-grid">
+                <label class="underlined-label">{{localize "Name"}}
+                    <input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'Name'}}"/>
+                </label>
+                <label class="underlined-label">{{localize "MAID_RPG.Sheet.Age"}}
+                    <input name="system.age" type="number" value="{{system.age}}"/>
+                </label>
+                <label class="underlined-label">{{localize "MAID_RPG.Npc.Kind"}}
+                    <select name="system.kind">
+                        {{selectOptions config.npcKinds selected=system.kind localize=true blank=""}}
+                    </select>
+                </label>
+                <label class="underlined-label">{{localize "MAID_RPG.Npc.Spirit"}}
+                    <input name="system.spirit" type="number" value="{{system.spirit}}" min="0"/>
+                </label>
+            </div>
+        </section>
+    </header>
+
+    <main class="npc-sheet-grid">
+        <aside class="attributes-panel bordered-panel">
+            <div class="note-heading-strip">
+                <h3>{{localize "MAID_RPG.Sheet.Attributes"}}</h3>
+            </div>
+            <div class="attribute-grid">
+                {{#each system.attributes as |value key|}}
+                    <div class="attribute-card">
+                        <button class="attribute-roll" type="button" data-roll-attribute="{{key}}">{{localize
+                                (lookup ../config.attributes key)}}</button>
+                        <input class="npc-attribute-value" type="number" name="system.attributes.{{key}}"
+                               value="{{value}}" min="0"/>
+                    </div>
+                {{/each}}
+            </div>
+        </aside>
+
+        <section class="npc-main-panel bordered-panel">
+            <div class="note-heading-strip">
+                <h3>{{localize "MAID_RPG.Npc.Profile"}}</h3>
+            </div>
+            <label class="npc-textarea-label">{{localize "MAID_RPG.Npc.Abilities"}}
+                <textarea name="system.abilities"
+                          placeholder="{{localize 'MAID_RPG.Npc.AbilitiesPlaceholder'}}">{{system.abilities}}</textarea>
+            </label>
+            <label class="npc-textarea-label">{{localize "MAID_RPG.Notes"}}
+                <textarea name="system.notes"
+                          placeholder="{{localize 'MAID_RPG.Sheet.NotesPlaceholder'}}">{{system.notes}}</textarea>
+            </label>
+        </section>
+    </main>
+</form>
