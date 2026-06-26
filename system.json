@@ -1,8 +1,8 @@
 {
   "id": "maid-rpg-vtt",
-  "title": "Maid RPG Test System",
-  "description": "A compact Foundry VTT V13/V14 test system inspired by modern community system structure.",
-  "version": "0.1.0",
+  "title": "Maid RPG",
+  "description": "Maid RPG system for Foundry VTT V13",
+  "version": "0.9",
   "compatibility": {
     "minimum": "13",
     "verified": "13.351"
