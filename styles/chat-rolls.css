@@ -1,0 +1,122 @@
+/* Maid RPG chat roll presentation. Kept separate from sheet styles on purpose. */
+.chat-log .chat-message .dice-roll {
+    --maid-roll-ink: #1f2933;
+    --maid-roll-border: #2f2f2f;
+    --maid-roll-paper: #ffffff;
+    --maid-roll-soft: #f4f4f4;
+    --maid-roll-accent: rgba(96, 44, 112, 0.18);
+    color: var(--maid-roll-ink);
+    margin: 0.35rem 0 0;
+}
+
+.chat-log .chat-message .dice-result {
+    background: var(--maid-roll-paper);
+    border: 3px solid var(--maid-roll-border);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.18);
+    padding: 0.5rem;
+}
+
+.chat-log .chat-message .dice-formula {
+    background: linear-gradient(90deg, var(--maid-roll-accent), transparent);
+    border: 1px dotted #b8b8b8;
+    border-radius: 0;
+    color: #111;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin: 0 0 0.45rem;
+    padding: 0.35rem 0.45rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.chat-log .chat-message .dice-total {
+    background: var(--maid-roll-soft);
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    color: #111;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0.45rem 0 0;
+    padding: 0.45rem;
+    text-align: center;
+}
+
+.chat-log .chat-message .dice-tooltip {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-log .chat-message .dice-tooltip .wrapper {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.chat-log .chat-message .tooltip-part {
+    border: 1px dotted #c7c7c7;
+    margin: 0;
+    padding: 0.35rem;
+}
+
+.chat-log .chat-message .part-header {
+    align-items: center;
+    border-bottom: 1px solid var(--color-underline-header, #c9c7b8);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    margin-bottom: 0.35rem;
+    padding-bottom: 0.2rem;
+}
+
+.chat-log .chat-message .part-formula,
+.chat-log .chat-message .part-total {
+    color: #111;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.chat-log .chat-message .dice-rolls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-log .chat-message .dice-rolls .roll.die {
+    align-items: center;
+    background: #fff;
+    border: 2px solid var(--maid-roll-border);
+    border-radius: 6px;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+    color: #111;
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 2rem;
+    justify-content: center;
+    min-width: 2rem;
+    padding: 0 0.35rem;
+}
+
+.chat-log .chat-message .dice-rolls .roll.die.min {
+    border-color: #8a3f3f;
+    color: #8a3f3f;
+}
+
+.chat-log .chat-message .dice-rolls .roll.die.max {
+    border-color: #3f6f4a;
+    color: #2f6b3d;
+}
+
+.chat-log .chat-message .flavor-text {
+    color: #111;
+    font-weight: 700;
+    text-transform: uppercase;
+}

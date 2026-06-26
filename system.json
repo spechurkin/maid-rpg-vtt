@@ -19,7 +19,8 @@
     "module/maid-rpg.mjs"
   ],
   "styles": [
-    "styles/maid-rpg.css"
+    "styles/maid-rpg.css",
+    "styles/chat-rolls.css"
   ],
   "languages": [
     {
