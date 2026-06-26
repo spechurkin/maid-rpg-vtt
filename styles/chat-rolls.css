@@ -1,4 +1,7 @@
-/* Maid RPG chat roll presentation. Kept separate from sheet styles on purpose. */
+.chat-message {
+    background: white;
+}
+
 .chat-log .chat-message .dice-roll {
     --maid-roll-ink: #1f2933;
     --maid-roll-border: #2f2f2f;
