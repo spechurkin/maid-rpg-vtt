@@ -570,3 +570,28 @@ h3 {
     text-transform: none;
     padding: 2px 5px;
 }
+
+.maid-rpg.actor .feature-box .editor,
+.maid-rpg.actor .note-box .editor,
+.maid-rpg.actor .maid-backstory-panel .editor {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #1f2933;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    min-height: 95px;
+    padding: 2px 5px;
+    text-transform: none;
+}
+
+.maid-rpg.actor .feature-box .editor-content,
+.maid-rpg.actor .note-box .editor-content,
+.maid-rpg.actor .maid-backstory-panel .editor-content {
+    background: #fff;
+    border-radius: 4px;
+    color: #1f2933;
+    font-weight: 400;
+    min-height: 75px;
+    text-transform: none;
+}

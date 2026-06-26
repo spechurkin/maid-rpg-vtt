@@ -92,9 +92,7 @@
                         <select name="system.powerSources.0">{{selectOptions config.masterPowerSources
                                                                              selected=(lookup system.powerSources 0)
                                                                              localize=true blank=""}}</select>
-                        <textarea name="system.powerSourceDescriptions.0" placeholder="{{localize
-                                'MAID_RPG.Master.PowerSource.DescriptionPlaceholder'}}">{{lookup
-                                system.powerSourceDescriptions 0}}</textarea>
+                        {{editor (lookup enrichedPowerSourceDescriptions 0) target="system.powerSourceDescriptions.0" button=true owner=owner editable=editable}}
                     </section>
                     <section class="feature-box">
                         <div class="note-heading-strip">
@@ -103,9 +101,7 @@
                         <select name="system.powerSources.1">{{selectOptions config.masterPowerSources
                                                                              selected=(lookup system.powerSources 1)
                                                                              localize=true blank=""}}</select>
-                        <textarea name="system.powerSourceDescriptions.1" placeholder="{{localize
-                                'MAID_RPG.Master.PowerSource.DescriptionPlaceholder'}}">{{lookup
-                                system.powerSourceDescriptions 1}}</textarea>
+                        {{editor (lookup enrichedPowerSourceDescriptions 1) target="system.powerSourceDescriptions.1" button=true owner=owner editable=editable}}
                     </section>
                     <section class="feature-box">
                         <div class="note-heading-strip">
@@ -114,8 +110,7 @@
                         <select name="system.stressExplosion">{{selectOptions config.stressExplosions
                                                                               selected=system.stressExplosion
                                                                               localize=true blank=""}}</select>
-                        <textarea name="system.stressExplosionDescription" placeholder="{{localize
-                                'MAID_RPG.Maid.StressExplosion.DescriptionPlaceholder'}}">{{system.stressExplosionDescription}}</textarea>
+                        {{editor enrichedStressExplosionDescription target="system.stressExplosionDescription" button=true owner=owner editable=editable}}
                     </section>
                 </div>
 
@@ -130,9 +125,7 @@
                                         ../config.masterSpecialQualities
                                         selected=quality
                                         localize=true blank=""}}</select>
-                                <textarea name="system.specialQualityDescriptions.{{index}}" placeholder="{{localize
-                                        'MAID_RPG.Master.SpecialQuality.DescriptionPlaceholder'}}">{{lookup
-                                        ../system.specialQualityDescriptions index}}</textarea>
+                                {{editor (lookup ../enrichedSpecialQualityDescriptions index) target=(concat "system.specialQualityDescriptions." index) button=true owner=../owner editable=../editable}}
                             </section>
                         {{/each}}
                     </div>
@@ -145,22 +138,19 @@
                         <div class="note-heading-strip">
                             <h3>{{localize "MAID_RPG.Stress"}}</h3>
                         </div>
-                        <textarea name="system.stressNotes" placeholder="{{localize
-                                'MAID_RPG.Sheet.StressPlaceholder'}}">{{system.stressNotes}}</textarea>
+                        {{editor enrichedStressNotes target="system.stressNotes" button=true owner=owner editable=editable}}
                     </section>
                     <section class="note-box">
                         <div class="note-heading-strip">
                             <h3>{{localize "MAID_RPG.Sheet.Trauma"}}</h3>
                         </div>
-                        <textarea name="system.trauma"
-                                  placeholder="{{localize 'MAID_RPG.Sheet.Trauma'}}">{{system.trauma}}</textarea>
+                        {{editor enrichedTrauma target="system.trauma" button=true owner=owner editable=editable}}
                     </section>
                     <section class="note-box">
                         <div class="note-heading-strip">
                             <h3>{{localize "MAID_RPG.Sheet.Seduction"}}</h3>
                         </div>
-                        <textarea name="system.seduction" placeholder="{{localize
-                                'MAID_RPG.Sheet.SeductionPlaceholder'}}">{{system.seduction}}</textarea>
+                        {{editor enrichedSeduction target="system.seduction" button=true owner=owner editable=editable}}
                     </section>
                 </section>
             </section>
@@ -177,7 +167,7 @@
                         <div class="note-heading-strip">
                             <h3>{{localize "MAID_RPG.Sheet.Backstory"}}</h3>
                         </div>
-                        <textarea name="system.description" placeholder="{{localize 'MAID_RPG.Sheet.BackstoryPlaceholder'}}">{{system.description}}</textarea>
+                        {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable}}
                     </section>
                 </section>
 
@@ -186,23 +176,19 @@
                         <div class="note-heading-strip">
                             <h3>{{localize "MAID_RPG.Notes"}}</h3>
                         </div>
-                        <textarea name="system.notes"
-                                  placeholder="{{localize
-                                          'MAID_RPG.Sheet.NotesPlaceholder'}}">{{system.notes}}</textarea>
+                        {{editor enrichedNotes target="system.notes" button=true owner=owner editable=editable}}
                     </section>
                     <section class="note-box">
                         <div class="note-heading-strip">
                             <h3>{{localize "MAID_RPG.Master.Mansion"}}</h3>
                         </div>
-                        <textarea name="system.mansion" placeholder="{{localize
-                                'MAID_RPG.Master.MansionPlaceholder'}}">{{system.mansion}}</textarea>
+                        {{editor enrichedMansion target="system.mansion" button=true owner=owner editable=editable}}
                     </section>
                     <section class="note-box">
                         <div class="note-heading-strip">
                             <h3>{{localize "MAID_RPG.Master.EncounterTable"}}</h3>
                         </div>
-                        <textarea name="system.encounterTable" placeholder="{{localize
-                                'MAID_RPG.Master.EncounterTablePlaceholder'}}">{{system.encounterTable}}</textarea>
+                        {{editor enrichedEncounterTable target="system.encounterTable" button=true owner=owner editable=editable}}
                     </section>
                 </section>
             </section>
