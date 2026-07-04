@@ -1,3 +1,7 @@
-2026/06/26-20:41:33.932 3340 Recovering log #7
-2026/06/26-20:41:33.937 3340 Delete type=0 #7
-2026/06/26-20:41:33.937 3340 Delete type=3 #6
+2026/07/04-17:44:23.275 85c0 Log #11: 0 ops saved to Table #40 OK
+2026/07/04-17:44:23.275 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\items-list/000011.log: OK
+2026/07/04-17:44:23.275 85c0 Log #39: 0 ops saved to Table #41 OK
+2026/07/04-17:44:23.275 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\items-list/000039.log: OK
+2026/07/04-17:44:23.278 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\items-list/MANIFEST-000010: OK
+2026/07/04-17:44:23.278 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\items-list/MANIFEST-000038: OK
+2026/07/04-17:44:23.281 85c0 **** Repaired leveldb L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\items-list; recovered 0 files; 0 bytes. Some data may have been lost. ****

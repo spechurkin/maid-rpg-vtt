@@ -1,5 +1,11 @@
-2026/06/26-20:41:33.939 8b8 Recovering log #3
-2026/06/26-20:41:33.939 8b8 Level-0 table #5: started
-2026/06/26-20:41:33.943 8b8 Level-0 table #5: 19752 bytes OK
-2026/06/26-20:41:33.947 8b8 Delete type=0 #3
-2026/06/26-20:41:33.947 8b8 Delete type=3 #2
+2026/07/04-17:44:23.298 85c0 Log #8: 36 ops saved to Table #38 OK
+2026/07/04-17:44:23.299 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\costumes/000008.log: OK
+2026/07/04-17:44:23.299 85c0 Log #37: 0 ops saved to Table #39 OK
+2026/07/04-17:44:23.299 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\costumes/000037.log: OK
+2026/07/04-17:44:23.299 85c0 Table #5: 36 entries OK
+2026/07/04-17:44:23.299 85c0 Table #10: 36 entries OK
+2026/07/04-17:44:23.300 85c0 Table #23: 36 entries OK
+2026/07/04-17:44:23.300 85c0 Table #38: 36 entries OK
+2026/07/04-17:44:23.302 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\costumes/MANIFEST-000007: OK
+2026/07/04-17:44:23.302 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\costumes/MANIFEST-000036: OK
+2026/07/04-17:44:23.305 85c0 **** Repaired leveldb L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\costumes; recovered 4 files; 90930 bytes. Some data may have been lost. ****

@@ -554,15 +554,11 @@ h3 {
 }
 
 .maid-rpg.item .item-rich-field .editor {
-    min-height: 180px;
-}
-
-.maid-rpg.item .item-description-field .editor {
-    min-height: 160px;
+    min-height: 13rem;
 }
 
 .maid-rpg.item .item-rich-field .editor-content {
-    min-height: 140px;
+    min-height: 10rem;
 }
 
 .maid-rpg.item .item-block {
@@ -582,10 +578,6 @@ h3 {
 
 .maid-rpg.item .item-rich-field .editor {
     border: 1px solid #ddd;
-}
-
-.maid-rpg.item .item-description-field .editor-content {
-    min-height: 160px;
 }
 
 .maid-rpg.item .item-rich-field .editor,
