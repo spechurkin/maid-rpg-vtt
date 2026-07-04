@@ -1,5 +1,5 @@
 import {MaidActor, MaidItem} from "./documents/_module.mjs";
-import {MaidActorSheet} from "./sheets/actor-sheet.mjs";
+import {MaidActorSheet} from "./sheets/maid-sheet.mjs";
 import {MaidButlerSheet} from "./sheets/butler-sheet.mjs";
 import {MaidMasterSheet} from "./sheets/master-sheet.mjs";
 import {MaidNpcSheet} from "./sheets/npc-sheet.mjs";

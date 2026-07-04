@@ -1,4 +1,4 @@
-import {MaidActorSheet} from "./actor-sheet.mjs";
+import {MaidActorSheet} from "./maid-sheet.mjs";
 
 export class MaidNpcSheet extends MaidActorSheet {
     static get defaultOptions() {
