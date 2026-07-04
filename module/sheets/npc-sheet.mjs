@@ -9,4 +9,11 @@ export class MaidNpcSheet extends MaidActorSheet {
             height: 680
         });
     }
+
+    async getData(options) {
+        const context = await super.getData(options);
+        const enrichOptions = {async: true, secrets: this.actor.isOwner};
+        context.enrichedAbilities = await TextEditor.enrichHTML(this.actor.system.abilities ?? "", enrichOptions);
+        return context;
+    }
 }

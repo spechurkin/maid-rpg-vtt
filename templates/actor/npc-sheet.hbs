@@ -43,10 +43,11 @@
             <div class="note-heading-strip">
                 <h3>{{localize "MAID_RPG.Npc.Profile"}}</h3>
             </div>
-            <label class="npc-textarea-label">{{localize "MAID_RPG.Npc.Abilities"}}
-                <textarea name="system.abilities"
-                          placeholder="{{localize 'MAID_RPG.Npc.AbilitiesPlaceholder'}}">{{system.abilities}}</textarea>
-            </label>
+            <div class="npc-textarea-label npc-rich-field">
+                <span>{{localize "MAID_RPG.Npc.Abilities"}}</span>
+                {{editor enrichedAbilities target="system.abilities" button=true owner=owner editable=editable
+                         engine="prosemirror"}}
+            </div>
             <div class="npc-textarea-label npc-rich-field">
                 <span>{{localize "MAID_RPG.Notes"}}</span>
                 {{editor enrichedNotes target="system.notes" button=true owner=owner editable=editable
