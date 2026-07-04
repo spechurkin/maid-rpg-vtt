@@ -37,3 +37,7 @@ Hooks.once("init", async () => {
     registerHandlebarsHelpers();
     await preloadHandlebarsTemplates();
 });
+
+Hooks.once("babele.init", (babele) => {
+    babele.setSystemTranslationsDir("babele");
+});

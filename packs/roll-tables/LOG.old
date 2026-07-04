@@ -1,10 +1,13 @@
-2026/07/04-17:44:23.324 85c0 Log #5: 75 ops saved to Table #35 OK
-2026/07/04-17:44:23.324 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\roll-tables/000005.log: OK
-2026/07/04-17:44:23.325 85c0 Log #34: 0 ops saved to Table #36 OK
-2026/07/04-17:44:23.325 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\roll-tables/000034.log: OK
-2026/07/04-17:44:23.325 85c0 Table #7: 75 entries OK
-2026/07/04-17:44:23.325 85c0 Table #20: 75 entries OK
-2026/07/04-17:44:23.325 85c0 Table #35: 75 entries OK
-2026/07/04-17:44:23.329 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\roll-tables/MANIFEST-000004: OK
-2026/07/04-17:44:23.329 85c0 Archiving L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\roll-tables/MANIFEST-000033: OK
-2026/07/04-17:44:23.331 85c0 **** Repaired leveldb L:\Foundry 13 Data\Data\systems\maid-rpg-vtt\packs\roll-tables; recovered 3 files; 32256 bytes. Some data may have been lost. ****
+2026/07/04-20:10:31.273 4600 Recovering log #38
+2026/07/04-20:10:31.273 4600 Level-0 table #40: started
+2026/07/04-20:10:31.278 4600 Level-0 table #40: 51253 bytes OK
+2026/07/04-20:10:31.282 4600 Delete type=0 #38
+2026/07/04-20:10:31.282 4600 Delete type=3 #37
+2026/07/04-20:10:31.282 6068 Compacting 4@0 + 0@1 files
+2026/07/04-20:10:31.286 6068 Generated table #42@0: 292 keys, 44980 bytes
+2026/07/04-20:10:31.286 6068 Compacted 4@0 + 0@1 files => 44980 bytes
+2026/07/04-20:10:31.287 6068 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/07/04-20:10:31.287 6068 Delete type=2 #7
+2026/07/04-20:10:31.287 6068 Delete type=2 #20
+2026/07/04-20:10:31.289 6068 Delete type=2 #35
+2026/07/04-20:10:31.289 6068 Delete type=2 #40

@@ -2,7 +2,7 @@
   "id": "maid-rpg-vtt",
   "title": "Maid RPG",
   "description": "Maid RPG system for Foundry VTT V13",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "compatibility": {
     "minimum": "13",
     "verified": "13.351"
