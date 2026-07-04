@@ -4,7 +4,7 @@
 
 An unofficial, community-supported system for playing the Maid RPG ttrpg on Foundry VTT.
 
-Translation by 
+Translation by HaruMoori\
 Items' translation and stylization by Me.\
 Made with OpenAI Codex.\
 Offered to you with love.
