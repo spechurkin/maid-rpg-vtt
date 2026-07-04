@@ -217,18 +217,13 @@
                         <div class="note-heading-strip">
                             <h3>{{localize "MAID_RPG.Sheet.Backstory"}}</h3>
                         </div>
-                        <textarea name="system.description" placeholder="{{localize 'MAID_RPG.Sheet.BackstoryPlaceholder'}}">{{system.description}}</textarea>
-                    </section>
-                </section>
-
-                <section class="maid-notes-grid">
-                    <section class="note-box">
+                        {{editor enrichedDescription target="system.description" button=true owner=owner editable=editable
+                                 engine="prosemirror"}}
                         <div class="note-heading-strip">
                             <h3>{{localize "MAID_RPG.Notes"}}</h3>
                         </div>
-                        <textarea name="system.notes"
-                                  placeholder="{{localize
-                                          'MAID_RPG.Sheet.NotesPlaceholder'}}">{{system.notes}}</textarea>
+                        {{editor enrichedNotes target="system.notes" button=true owner=owner editable=editable
+                                 engine="prosemirror"}}
                     </section>
                 </section>
             </section>

@@ -47,10 +47,11 @@
                 <textarea name="system.abilities"
                           placeholder="{{localize 'MAID_RPG.Npc.AbilitiesPlaceholder'}}">{{system.abilities}}</textarea>
             </label>
-            <label class="npc-textarea-label">{{localize "MAID_RPG.Notes"}}
-                <textarea name="system.notes"
-                          placeholder="{{localize 'MAID_RPG.Sheet.NotesPlaceholder'}}">{{system.notes}}</textarea>
-            </label>
+            <div class="npc-textarea-label npc-rich-field">
+                <span>{{localize "MAID_RPG.Notes"}}</span>
+                {{editor enrichedNotes target="system.notes" button=true owner=owner editable=editable
+                         engine="prosemirror"}}
+            </div>
         </section>
     </main>
 </form>

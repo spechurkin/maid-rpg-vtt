@@ -13,6 +13,9 @@ export class MaidActorSheet extends foundry.appv1.sheets.ActorSheet {
         const context = await super.getData(options);
         context.config = CONFIG.MAID_RPG;
         context.system = this.actor.system;
+        const enrichOptions = {async: true, secrets: this.actor.isOwner};
+        context.enrichedDescription = await TextEditor.enrichHTML(this.actor.system.description ?? "", enrichOptions);
+        context.enrichedNotes = await TextEditor.enrichHTML(this.actor.system.notes ?? "", enrichOptions);
         return context;
     }
 

@@ -229,6 +229,20 @@
     min-height: 7rem;
 }
 
+.maid-rpg .note-box .editor {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px 5px;
+    min-height: 15rem;
+}
+
+.maid-rpg .note-box .editor-content {
+    color: #1f2933;
+    min-height: 12rem;
+    padding: 2px 5px;
+}
+
 .maid-rpg .note-box h3 input {
     display: inline-block;
     width: 3.5rem;
@@ -408,6 +422,23 @@ h3 {
     text-transform: none;
 }
 
+.maid-rpg.npc .npc-rich-field .editor {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-weight: 400;
+    margin-top: 0.25rem;
+    min-height: 10rem;
+    text-transform: none;
+}
+
+.maid-rpg.npc .npc-rich-field .editor-content {
+    color: #1f2933;
+    min-height: 7rem;
+    padding: 2px 5px;
+}
+
 @media (max-width: 760px) {
     .maid-rpg.npc .npc-sheet-header,
     .maid-rpg.npc .npc-sheet-grid {
@@ -549,12 +580,6 @@ h3 {
     text-align: center;
 }
 
-.maid-rpg.item .item-rich-field .editor,
-.maid-rpg.item .item-rich-field .editor-content {
-    background: #fff;
-    border-radius: 4px;
-}
-
 .maid-rpg.item .item-rich-field .editor {
     border: 1px solid #ddd;
 }
@@ -565,6 +590,8 @@ h3 {
 
 .maid-rpg.item .item-rich-field .editor,
 .maid-rpg.item .item-rich-field .editor-content {
+    background: #fff;
+    border-radius: 4px;
     color: #1f2933;
     font-weight: 400;
     text-transform: none;
