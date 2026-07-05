@@ -50,6 +50,7 @@
         <nav class="sheet-tabs tabs maid-sheet-tabs" data-group="primary">
             <a class="item" data-tab="main">{{localize "MAID_RPG.Tab.Main"}}</a>
             <a class="item" data-tab="bio">{{localize "MAID_RPG.Tab.Bio"}}</a>
+            <a class="item" data-tab="inventory">{{localize "MAID_RPG.Tab.Inventory"}}</a>
         </nav>
 
         <section class="sheet-body">
@@ -113,15 +114,13 @@
                         </div>
                         <select name="system.maidPower">
                             <option value=""></option>
-                            {{#select system.maidPower}}
-                                {{#each config.maidPowers as |group|}}
-                                    <optgroup label="{{localize group.label}}">
-                                        {{#each group.options as |label value|}}
-                                            <option value="{{value}}">{{localize label}}</option>
-                                        {{/each}}
-                                    </optgroup>
-                                {{/each}}
-                            {{/select}}
+                            {{#each config.maidPowers as |group|}}
+                                <optgroup label="{{localize group.label}}">
+                                    {{#each group.options as |label value|}}
+                                        <option value="{{value}}" {{#if (eq @root.system.maidPower value)}}selected{{/if}}>{{localize label}}</option>
+                                    {{/each}}
+                                </optgroup>
+                            {{/each}}
                         </select>
                         <textarea name="system.maidPowerDescription" placeholder="{{localize
                                 'MAID_RPG.Maid.MaidPower.DescriptionPlaceholder'}}">{{system.maidPowerDescription}}</textarea>
@@ -226,6 +225,10 @@
                                  engine="prosemirror"}}
                     </section>
                 </section>
+            </section>
+
+            <section class="tab" data-group="primary" data-tab="inventory">
+                {{> "systems/maid-rpg-vtt/templates/actor/parts/inventory.hbs"}}
             </section>
         </section>
     {{else}}

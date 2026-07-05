@@ -476,6 +476,152 @@ h3 {
     grid-template-columns: 274px 1fr;
 }
 
+.maid-rpg .inventory-panel {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.maid-rpg .inventory-header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: space-between;
+}
+
+.maid-rpg .inventory-header .note-heading-strip {
+    flex: 1 1 12rem;
+    margin-bottom: 0;
+    min-width: 0;
+}
+
+.maid-rpg .inventory-add-button,
+.maid-rpg .inventory-item-controls button {
+    align-items: center;
+    display: inline-flex;
+    gap: 0.35rem;
+    justify-content: center;
+    min-height: 2rem;
+}
+
+.maid-rpg .inventory-add-button {
+    flex: 0 1 auto;
+    font-size: 0.82rem;
+    line-height: 1;
+    margin-left: auto;
+    max-width: 12rem;
+    min-height: 1.65rem;
+    min-width: 0;
+    overflow: hidden;
+    padding: 0.15rem 0.55rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+}
+
+.maid-rpg .inventory-add-button span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.maid-rpg .inventory-list {
+    display: grid;
+    gap: 0.35rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.maid-rpg .inventory-item {
+    align-items: center;
+    border: 1px dotted #ccc;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 46px 1fr 2.25rem;
+    min-height: 3.5rem;
+    padding: 0.35rem;
+}
+
+.maid-rpg .inventory-item-readonly {
+    grid-template-columns: 46px 1fr;
+}
+
+.maid-rpg .inventory-image {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    height: 46px;
+    object-fit: cover;
+    width: 46px;
+}
+
+.maid-rpg .inventory-item-main {
+    display: grid;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.maid-rpg .inventory-item-name {
+    background: transparent;
+    border: 0;
+    color: #111;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.maid-rpg .inventory-item-meta {
+    color: #4b5563;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+    gap: 0.35rem;
+    min-width: 0;
+}
+
+.maid-rpg .inventory-item-meta span {
+    overflow-wrap: anywhere;
+}
+
+.maid-rpg .inventory-item-controls {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.maid-rpg .inventory-empty {
+    border: 1px dotted #ccc;
+    margin: 0;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .maid-rpg .maid-bio-grid,
+    .maid-rpg .inventory-item {
+        grid-template-columns: 1fr;
+    }
+
+    .maid-rpg .inventory-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .maid-rpg .inventory-image {
+        justify-self: center;
+    }
+
+    .maid-rpg .inventory-item-controls {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
 .maid-rpg .maid-profile-img {
     border: 2px solid var(--color-border-light-tertiary, #b5a08a);
     cursor: pointer;

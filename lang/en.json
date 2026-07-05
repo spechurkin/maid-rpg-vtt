@@ -30,7 +30,13 @@
       "Benefits": "Benefits",
       "Notes": "Notes",
       "Description": "Description",
-      "Item": "Item"
+      "Item": "Item",
+      "AddCustom": "Add item",
+      "NewCustomItem": "New item",
+      "Edit": "Edit",
+      "Delete": "Delete",
+      "DeleteTitle": "Delete item",
+      "DeleteConfirm": "Delete \"{name}\" from inventory?"
     },
     "Items": "Items",
     "Mood": "Mood",
@@ -44,7 +50,8 @@
     "Value": "Value",
     "Tab": {
       "Bio": "Biography",
-      "Main": "Main"
+      "Main": "Main",
+      "Inventory": "Inventory"
     },
     "Maid": {
       "CharacterSheet": "Maid Character Sheet",

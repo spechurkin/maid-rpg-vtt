@@ -1,0 +1,51 @@
+<section class="inventory-panel bordered-panel">
+    <header class="inventory-header">
+        <div class="note-heading-strip">
+            <h3>{{localize "MAID_RPG.Tab.Inventory"}}</h3>
+        </div>
+        {{#if editable}}
+            <button class="inventory-add-button" type="button" data-item-action="create" data-item-type="item"
+                    title="{{localize 'MAID_RPG.Item.AddCustom'}}">
+                <i class="fas fa-plus"></i>
+                <span>{{localize "MAID_RPG.Item.AddCustom"}}</span>
+            </button>
+        {{/if}}
+    </header>
+
+    {{#if hasInventoryItems}}
+        <ol class="inventory-list">
+            {{#each inventoryItems as |item|}}
+                <li class="inventory-item item {{#unless ../editable}}inventory-item-readonly{{/unless}}"
+                    data-item-id="{{item.id}}" data-item-type="{{item.type}}" draggable="true">
+                    <img class="inventory-image" src="{{item.img}}" alt="{{item.name}}"/>
+
+                    <div class="inventory-item-main">
+                        <button class="inventory-item-name" type="button" data-item-action="edit"
+                                title="{{localize 'MAID_RPG.Item.Edit'}}">
+                            {{item.name}}
+                        </button>
+                        <div class="inventory-item-meta">
+                            <span>{{item.subtitle}}</span>
+                            {{#if item.details}}
+                                <span>{{item.details}}</span>
+                            {{/if}}
+                        </div>
+                    </div>
+
+                    {{#if ../editable}}
+                        <div class="inventory-item-controls">
+                            <button type="button" data-item-action="edit" title="{{localize 'MAID_RPG.Item.Edit'}}">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button type="button" data-item-action="delete" title="{{localize 'MAID_RPG.Item.Delete'}}">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    {{/if}}
+                </li>
+            {{/each}}
+        </ol>
+    {{else}}
+        <p class="inventory-empty">{{localize "MAID_RPG.NoItems"}}</p>
+    {{/if}}
+</section>

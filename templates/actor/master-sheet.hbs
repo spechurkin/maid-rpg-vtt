@@ -47,6 +47,7 @@
         <nav class="sheet-tabs tabs maid-sheet-tabs" data-group="primary">
             <a class="item" data-tab="main">{{localize "MAID_RPG.Tab.Main"}}</a>
             <a class="item" data-tab="bio">{{localize "MAID_RPG.Tab.Bio"}}</a>
+            <a class="item" data-tab="inventory">{{localize "MAID_RPG.Tab.Inventory"}}</a>
         </nav>
 
         <section class="sheet-body">
@@ -203,6 +204,10 @@
                                 'MAID_RPG.Master.EncounterTablePlaceholder'}}">{{system.encounterTable}}</textarea>
                     </section>
                 </section>
+            </section>
+
+            <section class="tab" data-group="primary" data-tab="inventory">
+                {{> "systems/maid-rpg-vtt/templates/actor/parts/inventory.hbs"}}
             </section>
         </section>
     {{else}}
