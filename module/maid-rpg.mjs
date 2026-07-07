@@ -17,7 +17,7 @@ Hooks.once("init", async () => {
 
     foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
     foundry.documents.collections.Actors.registerSheet(MAID_RPG.id, MaidActorSheet, {
-        types: ["maid"], makeDefault: true
+        types: ["maid"], makeDefault: true, label: "TYPES.Actor.maid"
     });
     foundry.documents.collections.Actors.registerSheet(MAID_RPG.id, MaidNpcSheet, {
         types: ["npc"], makeDefault: true, label: "TYPES.Actor.npc"
