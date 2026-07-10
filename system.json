@@ -2,7 +2,7 @@
   "id": "maid-rpg-vtt",
   "title": "Maid RPG",
   "description": "Adaptation of Roll20 Maid RPG system for Foundry VTT V13",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": {
     "minimum": "13",
     "verified": "13.351"
