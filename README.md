@@ -13,4 +13,4 @@ Offered to you with love.
 
 [Foundry URL]: https://foundryvtt.com
 
-[Version]: https://img.shields.io/badge/Version-1.0.0-informational
+[Version]: https://img.shields.io/badge/Version-1.0.2-informational
