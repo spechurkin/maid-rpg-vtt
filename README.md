@@ -1,6 +1,5 @@
 # Maid RPG for Foundry VTT
-
-[![Foundry]][Foundry URL] ![Version]
+[![Foundry-13]][Foundry URL] [![Foundry-14]][Foundry URL] ![Version]
 
 An unofficial, community-supported system for playing the Maid RPG ttrpg on Foundry VTT.
 
@@ -9,7 +8,9 @@ Items' translation and stylization by Me.\
 Made with OpenAI Codex.\
 Offered to you with love.
 
-[Foundry]: https://img.shields.io/badge/Foundry-13.351-orange?logo=foundryvirtualtabletop&logosize=auto
+[Foundry-13]: https://img.shields.io/badge/Foundry-13.351-orange?logo=foundryvirtualtabletop&logosize=auto
+
+[Foundry-14]: https://img.shields.io/badge/Foundry-14.364-orange?logo=foundryvirtualtabletop&logosize=auto
 
 [Foundry URL]: https://foundryvtt.com
 
